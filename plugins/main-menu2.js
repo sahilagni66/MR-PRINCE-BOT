@@ -39,26 +39,26 @@ let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let str = ` *🛡️PЯINCΣ-BOT-MÐ🛡️*
 
 
-╭━⊱「Wᴇʟᴄᴏᴍᴇ ᴛᴏ ᴄᴏᴍᴍᴀɴᴅs ᴍᴇɴᴜ⊱━╮
+╭━⊱「𝐖𝖾ᥣ𝖼ⱺꭑ𝖾 𝐓ⱺ 𝐅𝖾ᥣ𝗂𝗑 𝐁ⱺ𝗍 𝐂ⱺꭑꭑα𐓣ᑯ 𝐌𝖾𐓣υ⊱━╮
 │
-│🕋✫ - 「${usedPrefix}𝘘𝘶𝘳𝘢𝘯𝘮𝘦𝘯𝘶
-│📚✫ - 「${usedPrefix}𝘚𝘵𝘶𝘥𝘺𝘮𝘦𝘯𝘶
-│🛡️✫ - 「${usedPrefix}𝘖𝘸𝘯𝘦𝘳𝘮𝘦𝘯𝘶
-│💌✫ - 「${usedPrefix}𝘉𝘰𝘵𝘮𝘦𝘯𝘶 
-│🧬✫ - 「${usedPrefix}𝘎𝘳𝘰𝘶𝘱𝘮𝘦𝘯𝘶
-│📥✫ - 「${usedPrefix}𝘋𝘭𝘮𝘦𝘯𝘶
-│🧰✫ - 「${usedPrefix}𝘛𝘰𝘰𝘭𝘮𝘦𝘯𝘶
-│🎨✫ - 「${usedPrefix}𝘚𝘵𝘪𝘤𝘬𝘦𝘳𝘮𝘦𝘯𝘶
-│🎉✫ - 「${usedPrefix}𝘍𝘶𝘯𝘮𝘦𝘯𝘶 
-│🎮✫ - 「${usedPrefix}𝘎𝘢𝘮𝘦𝘮𝘦𝘯𝘶
-│🎩✫ - 「${usedPrefix}𝘓𝘰𝘨𝘰𝘮𝘦𝘯𝘶
-│ *${usedPrefix}ᴍᴇɴᴜ2 ғᴏʀ ᴄᴏᴍᴍᴀɴᴅs ʟɪsᴛ*
-│ *${usedPrefix}ᴍᴇɴᴜ3 ғᴏʀ sᴘᴇᴄɪᴀʟ ᴍᴇɴᴜ ʟɪsᴛ*
-│ *${usedPrefix}ʟɪsᴛ ғᴏʀ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ʟɪsᴛ*
+│🕋✫ - 「${usedPrefix}𝐐υ𝗋α𐓣𝐌𝖾𐓣υ
+│📚✫ - 「${usedPrefix}𝐒𝗍υᑯ𝗒𝐌𝖾𐓣υ
+│🛡️✫ - 「${usedPrefix}𝐎ω𐓣𝖾𝗋𝐌𝖾𐓣υ
+│💌✫ - 「${usedPrefix}𝐁ⱺ𝗍𝐌𝖾𐓣υ 
+│🧬✫ - 「${usedPrefix}𝐆𝗋ⱺυρ𝐌𝖾𐓣υ
+│📥✫ - 「${usedPrefix}𝐃ᥣ𝐌𝖾𐓣υ
+│🧰✫ - 「${usedPrefix}𝐓ⱺⱺᥣ𝐌𝖾𐓣υ
+│🎨✫ - 「${usedPrefix}𝐒𝗍𝗂𝖼𝗄𝖾𝗋𝐌𝖾𐓣υ
+│🎉✫ - 「${usedPrefix}𝐅υ𐓣𝐌𝖾𐓣υ 
+│🎮✫ - 「${usedPrefix}𝐆αꭑ𝖾𝐌𝖾𐓣υ
+│🎩✫ - 「${usedPrefix}𝐋ⱺ𝗀ⱺ𝐌𝖾𐓣υ
+│ *${usedPrefix}𝐌𝖾𐓣υ2 𝐅ⱺ𝗋 𝐂ⱺꭑꭑα𐓣ᑯ 𝐋𝗂𝗌𝗍*
+│ *${usedPrefix}𝐌𝖾𐓣υ3 𝐅ⱺ𝗋 𝐂ⱺꭑꭑα𐓣ᑯ 𝐋𝗂𝗌𝗍*
+│ *${usedPrefix}𝐋𝗂𝗌𝗍 𝐅ⱺ𝗋 𝐀ᥣᥣ 𝐂ⱺꭑꭑα𐓣ᑯ 𝐋𝗂𝗌𝗍*
 │
 │ *${greeting}*
 ╰━━━━━━━━━━━━━━━━━━━━━━━━╯
-📚 *_Quote of the day: ${quote}_* 📚
+📚 *_𝐅𝖾ᥣ𝗂𝗑 𝐐υⱺ𝗍𝖾 𝐎𝖿 𝐓ɦ𝖾 𝐃α𝗒: ${quote}_* 📚
 `
 
 
