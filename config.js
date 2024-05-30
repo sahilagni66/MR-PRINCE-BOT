@@ -13,7 +13,7 @@ if (!ownervb){
 
 const ownerlist = ownervb.split(';');
 
-global.owner = [];
+global.owner = ['918127875972'];
 for (let i = 0; i < ownerlist.length; i += 2) {
     const owner = [
         ownerlist[i],            
@@ -27,7 +27,7 @@ for (let i = 0; i < ownerlist.length; i += 2) {
 
 
 //💌global.pairingNumber = "" //put your bot number here💌
-global.mods = ['923042205427'] 
+global.mods = ['918127875972'] 
 global.prems = ['']
 global.allowed = ['']
 global.keysZens = ['c2459db922', '37CC845916', '6fb0eff124']
@@ -125,13 +125,13 @@ global.developer = 'https://wa.me/message/DCAK67ON3XVOG1' //contact
 
 //Sticker WM
 global.botname = process.env.BOT_NAME
-global.princebot = '🛡️𝘗𝘙𝘐𝘕𝘊𝘌-𝘉𝘖𝘛-𝘔𝘋🛡️'
-global.packname = 'Prince♥️' 
-global.author = 'Prince♥️' 
+global.princebot = '🛡️𝐅𝖾ᥣ𝗂𝗑 𝚰𝗌 𝐇𝖾𝗋𝖾🛡️'
+global.packname = '𝐅𝖾ᥣ𝗂𝗑' 
+global.author = '𝐀ᑯᑯ 𝐓ⱺ 𝐅α𝗏ⱺυ𝗋𝗂𝗍𝖾 𝐊α𝗋ᥣⱺ❤️' 
 global.princeig = 'https://www.instagram.com' 
-global.princegp = 'https://chat.whatsapp.com/GWJkAJSgbv27sGOMLAzMDS'
+global.princegp = 'https://chat.whatsapp.com/EOojWFPhi2204G7mEFFKXc'
 global.menuvid = 'https://i.imgur.com/GFAAXqw.mp4'
-global.Princesc = 'https://github.com/PRINCE-GDS/THE-PRINCE-BOT' 
+global.Princesc = 'https://github.com' 
 global.princeyt = 'https://youtube.com/'
 global.Princelog = 'https://i.imgur.com/cUvIv5w.jpeg'
 global.thumb = fs.readFileSync('./Assets/Prince.png')
@@ -140,8 +140,8 @@ global.thumb = fs.readFileSync('./Assets/Prince.png')
 
 
 //Reactions
-global.wait = '*♻️ _𝙶𝙴𝚃𝚃𝙸𝙽𝙶 𝚈𝙾𝚄𝚁 𝙵𝙸𝙻𝙴 𝚆𝙰𝙸𝚃..._*\n*▰▰▰▱▱▱▱▱*'
-global.imgs = '*🖼️ _𝙶𝙴𝚃𝚃𝙸𝙽𝙶 𝚈𝙾𝚄𝚁 ɪᴍᴀɢᴇs 𝚆𝙰𝙸𝚃..._*\n*▰▰▰▱▱▱▱▱*'
+global.wait = '*♻️ _𝐑υ𝗄ⱺ 𝐙𝗋α 𝐅𝖾ᥣ𝗂𝗑 𝐓ɦⱺᑯα 𝐁υ𝗌𝗒 𝐇𝖾𝗂𐓣..._*\n*▰▰▰▱▱▱▱▱*'
+global.imgs = '*🖼️ _𝐑υ𝗄ⱺ 𝐙𝗋α 𝐅𝖾ᥣ𝗂𝗑 𝐓ɦⱺᑯα 𝐁υ𝗌𝗒 𝐇𝖾𝗂𐓣..._*\n*▰▰▰▱▱▱▱▱*'
 global.rwait = '♻️'
 global.dmoji = '🤭'
 global.done = '✅'
