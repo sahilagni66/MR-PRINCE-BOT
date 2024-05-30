@@ -1,14 +1,14 @@
 let handler = async m => m.reply(`
 ★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆
-≡★☆🅟🅡🅘🅝🅒🅔 🅣🅗🅔 🅞🅦🅝🅔🅡☆★≡
+≡★☆𝐅𝖾ᥣ𝗂𝗑 𝚰𝗌 𝐇𝖾𝗋𝖾☆★≡
 
 ★𝚂𝚄𝙿𝙿𝙾®𝚃 𝙶𝚁𝙾𝚄𝙿 𝙻𝙸𝙽𝙺★
 ─────────────
-▢ ★☆☆🛡️𝘗𝘙𝘐𝘕𝘊𝘌-𝘉𝘖𝘛-𝘔𝘋🛡️☆☆★
+▢ ★☆☆🛡️𝐅𝖾ᥣ𝗂𝗑 𝚰𝗌 𝐇𝖾𝗋𝖾🛡️☆☆★
 
-🅛🅘🅝🅚: https://chat.whatsapp.com/Jo5bmHMAlZpEIp75mKbwxP
+🅛🅘🅝🅚: https://chat.whatsapp.com/EOojWFPhi2204G7mEFFKXc
 
-🅛🅘🅝🅚: https://whatsapp.com/channel/0029VaKNbWkKbYMLb61S1v11
+🅛🅘🅝🅚: https://chat.whatsapp.com/EOojWFPhi2204G7mEFFKXc
 
 ★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★
 ★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆
