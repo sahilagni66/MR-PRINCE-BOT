@@ -41,6 +41,8 @@ let str = ` *🛡️PЯINCΣ-BOT-MÐ🛡️*
 
 ╭━⊱「𝐖𝖾ᥣ𝖼ⱺꭑ𝖾 𝐓ⱺ 𝐅𝖾ᥣ𝗂𝗑 𝐁ⱺ𝗍 𝐂ⱺꭑꭑα𐓣ᑯ 𝐌𝖾𐓣υ⊱━╮
 │
+│https://chat.whatsapp.com/EOojWFPhi2204G7mEFFKXc
+│
 │🕋✫ - 「${usedPrefix}𝐐υ𝗋α𐓣𝐌𝖾𐓣υ
 │📚✫ - 「${usedPrefix}𝐒𝗍υᑯ𝗒𝐌𝖾𐓣υ
 │🛡️✫ - 「${usedPrefix}𝐎ω𐓣𝖾𝗋𝐌𝖾𐓣υ
