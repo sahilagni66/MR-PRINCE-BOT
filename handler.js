@@ -103,6 +103,8 @@ export async function handler(chatUpdate) {
                     user.level = 0
                 if (!('role' in user))
                     user.role = 'Tadpole'
+		    if (!('language' in user))
+                    user.language = 'en'
                 if (!('autolevelup' in user))
                     user.autolevelup = false
             } else {
@@ -120,6 +122,7 @@ export async function handler(chatUpdate) {
                     afkReason: '',
                     banned: false,
                     warn: 0,
+		    language: 'en',
                     level: 0,
                     role: 'Tadpole',
                     autolevelup: false,
@@ -146,6 +149,7 @@ export async function handler(chatUpdate) {
                 if (!("useDocument" in chat)) chat.useDocument = false
                 if (!("viewOnce" in chat)) chat.viewOnce = false
                 if (!("viewStory" in chat)) chat.viewStory = false
+		if (!('antiBotClone' in chat)) chat.antiBotClone = false
                 if (!("welcome" in chat)) chat.welcome = false
                 if (!("chatbot" in chat)) chat.chatbot = false
                 if (!isNumber(chat.expired)) chat.expired = 0
@@ -155,6 +159,7 @@ export async function handler(chatUpdate) {
                     antiLink: false,
                     antiSticker: false,
                     antiToxic: false,
+		    antiBotClone: false,
                     detect: false,
                     expired: 0,
                     getmsg: true,
@@ -173,8 +178,8 @@ export async function handler(chatUpdate) {
                     chatbot: false
                 }
           
-                
-            let settings = global.db.data.settings[this.user.jid]
+              
+            var settings = global.db.data.settings[this.user.jid]
             if (typeof settings !== "object") global.db.data.settings[this.user.jid] = {}
             if (settings) {
                 if (!("self" in settings)) settings.self = false
@@ -182,25 +187,27 @@ export async function handler(chatUpdate) {
                 if (!("restrict" in settings)) settings.restrict = false
                 if (!("restartDB" in settings)) settings.restartDB = 0
                 if (!("status" in settings)) settings.status = 0
+		if (!('solopv' in settings)) settings.solopv = false // el bot responde solo por dm
+                if (!('sologp' in settings)) settings.sologp = false // el bot responde solo en grupos
 
             } else global.db.data.settings[this.user.jid] = {
                 self: false,
                 autoread: false,
                 restrict: false,
                 restartDB: 0,
+		solopv: false, 
+                sologp: false,
                 status: 0
             }
         } catch (e) {
             console.error(e)
         }
-        if (opts["nyimak"])
-            return
-        if (opts["pconly"] && m.chat.endsWith("g.us"))
-            return
-        if (opts["gconly"] && !m.chat.endsWith("g.us"))
-            return
-        if (opts["swonly"] && m.chat !== "status@broadcast")
-            return
+        if (opts["nyimak"]) return
+        if (opts["pconly"] && m.chat.endsWith("g.us")) return
+        if (opts["gconly"] && !m.chat.endsWith("g.us")) return
+	if (settings.solopv && m.chat.endsWith('g.us')) return  
+        if (settings.sologp && !m.chat.endsWith('g.us')) return
+        if (opts["swonly"] && m.chat !== "status@broadcast") return
         if (typeof m.text !== "string")
             m.text = ""
 
@@ -824,47 +831,20 @@ export async function presenceUpdate(presenceUpdate) {
 dfail
  */
 global.dfail = (type, m, conn) => {
-    const userTag = `H E Y 👋🏻  *@${m.sender.split("@")[0]}*,`
-    const emoji = {
-        general: '⚙️',
-        owner: '🛡️',
-        moderator: '🛡️',
-        premium: '💎',
-        group: '💌',
-        private: '📱',
-        admin: '🪩',
-        botAdmin: '❎',
-        unreg: '🔒',
-        nsfw: '🔞',
-        rpg: '🎮',
-        restrict: '⛔',
-    }
-
-    const msg = {
-        owner: `*${emoji.owner}  ɪᴛs ᴏᴡɴᴇʀ ᴄᴏᴍᴍᴀɴᴅ*\n
-    ${userTag} ᴏɴʟʏ ʙᴏᴛ ᴏᴡɴᴇʀ ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ!*`,
-        moderator: `*${emoji.moderator} Moderator's Query*\n
-    ${userTag} This command can only be used by *Moderators*!`,
-        premium: `*${emoji.premium} Premium Query*\n
-    ${userTag} This command is only for *Premium Members*!`,
-        group: `*${emoji.group} ɪᴛs ɢʀᴏᴜᴘ ᴄᴏᴍᴍᴀɴᴅ*\n
-    ${userTag} ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪs ᴏɴʟʏ ғᴏʀ ɢʀᴏᴜᴘs!*`,
-        private: `*${emoji.private} ɪᴛs ᴀ ᴘʀɪᴠᴀᴛᴇ ᴄᴏᴍᴍᴀɴᴅ*\n
-    ${userTag} ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪs ᴏɴʟʏ ғᴏʀ PRIVATE ᴄʜᴀᴛs*!`,
-        admin: `*${emoji.admin} ɪᴛs ᴀᴅᴍɪɴs ᴄᴏᴍᴍᴀɴᴅ*\n
-    ${userTag} ᴏɴʟʏ ɢʀᴏᴜᴘ ᴀᴅᴍɪɴs ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ*!`,
-        botAdmin: `*${emoji.botAdmin} Aᴅᴍɪɴɪsᴛʀᴀᴛɪᴏɴ ʀᴇϙᴜɪʀᴇᴅ*\n
-    ${userTag} ᴍᴀᴋᴇ ᴛʜᴇ BOT ᴀɴ ᴀᴅᴍɪɴ ᴛᴏ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ!`,
-        unreg: `*${emoji.unreg} Registration Query*\n
-    ${userTag} Please register to use this feature by typing:\n\n*#register name.age*\n\nExample: *#register ${m.name}.18*!`,
-        nsfw: `*${emoji.nsfw} NSFW Query*\n
-    ${userTag} NSFW is not active. Please contact the Group admin to enable this feature!`,
-        restrict: `*${emoji.restrict} Inactive Feature Query*\n
-    ${userTag} This feature is *disabled*!`,
-    }
-     [type]
-    if (msg) return  m.reply(msg)
-
+    let msg = {
+        rowner: `👑 ${mssg.rownerH}`,
+        owner: `😎 ${mssg.ownerH}`,
+        mods: `🔰 ${mssg.modsH}`,
+        premium: `💠 ${mssg.premH}`,
+        group: `⚙️ ${mssg.groupH}`,
+        private: `📮 ${mssg.privateH}`,
+        admin: `🛡️ ${mssg.adminH}`,
+        botAdmin: `💥 ${mssg.botAdmin}`,
+        unreg: `📇 ${mssg.unregH}`,
+        restrict: '🔐 This feature is *disabled*'
+    }[type]
+    //if (msg) return conn.sendButton(m.chat, msg, mssg.ig, null, [['🔖 OK', 'khajs'], ['⦙☰ MENU', '/menu'] ], m)
+    if (msg) return m.reply(msg)
 }
 
 let file = global.__filename(import.meta.url, true)
