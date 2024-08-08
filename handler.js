@@ -203,8 +203,8 @@ export async function handler(chatUpdate) {
             console.error(e)
         }
         if (opts["nyimak"]) return
-        if (opts["pconly"] && m.chat.endsWith("g.us")) return
-        if (opts["gconly"] && !m.chat.endsWith("g.us")) return
+        //if (opts["pconly"] && m.chat.endsWith("g.us")) return
+        //if (opts["gconly"] && !m.chat.endsWith("g.us")) return
 	if (settings.solopv && m.chat.endsWith('g.us')) return  
         if (settings.sologp && !m.chat.endsWith('g.us')) return
         if (opts["swonly"] && m.chat !== "status@broadcast") return

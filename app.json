@@ -1,9 +1,9 @@
 {
-  "name": "PRINCE-BOT",
-  "description": "Prince MD A WhatsApp User BOT",
+  "name": "P-MD-BOT",
+  "description": "P-MD A SUPER WHATSAPP USER BOT",
   "logo": "https://telegra.ph/file/d9bcfd1ae673ebd58bd3e.jpg",
   "keywords": ["java", "bot", "whatsapp-bot", "whatsapp-automation"],
-  "repository": "https://github.com/PRINCE-GDS/MR-PRINCE-BOT",
+  "repository": "https://github.com/PRINCE-GDS/PRINCE-MD-BOT",
   
   "stack": "container",
   "env": {
@@ -35,12 +35,17 @@
     "antidelete": {
       "description": "BOT will forward deleted messages if you make it true",
       "required": false,
-      "value": "false"
+      "value": "true"
        },
     "BOT_NAME": {
       "description": "Put your BOT a name",
       "required": true,
       "value": "ᴛʜᴇ-ᴘʀɪɴᴄᴇ-ᴍᴅ-ʙᴏᴛ"
+      },
+    "DATABASE_URL": {
+      "description": "Put your MongoDB here",
+      "required": false,
+      "value": ""
       },
     "DL_MSG": {
       "description": "Video downloader caption",

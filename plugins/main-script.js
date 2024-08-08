@@ -22,7 +22,7 @@ let handler = async function (m, { conn, __dirname }) {
 │✫ - *🛡️Owner: ${repoData.owner.login}*
 │✫ - *⭐Stars: ${repoData.stargazers_count}*
 │✫ - *💌Forks: ${repoData.forks_count}*
-│✫ - *🌐 URL: ${repoData.html_url}*
+│✫ - *🌐 URL:* ${repoData.html_url}
 ╰━━━━━━━━━━━━━━━━━╯
       `.trim();
 
